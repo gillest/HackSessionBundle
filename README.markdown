@@ -16,6 +16,15 @@ This assumption used for this temporary fix is really precise but allows only on
 Installation
 ---------------------
 
+Add the bundle in the deps file of your project
+    # deps
+    [HackSessionBundle]
+        git=git@github.com:gillest/HackSessionBundle.git
+        target=bundles/Gilles/Bundle/HackSessionBundle
+
+Launch the bundle install command then
+    ./bin/vendors install
+
 Add the bundle namespace to the autoload configuration file.
 
     # app/autoload.php
