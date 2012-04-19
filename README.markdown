@@ -1,4 +1,4 @@
-Elastica: elasticsearch PHP Client
+Hack bundle for session beginning one click too early on login 
 ==================================
 
 Purpose
@@ -27,6 +27,7 @@ Add the bundle namespace to the autoload configuration file.
     ));
     
  Then, register the bundle in the kernel :
+ 
     # app/AppKernel.php
     <?php
     ...
@@ -43,12 +44,14 @@ Add the bundle namespace to the autoload configuration file.
         ...
     }
 
-At the configuration level, you need to provide the same parameter to both firewall and hack listener.
+At the configuration level, you need to provide the same parameter to both firewall and hack listener:
+
     # app/config/config.yml
     gilles_hack_session:
         login_check_path: %local_form_login_check_path%
 
-Then, set to the same parameter the check_path you have set for the wanted firewall area
+Then, set to the same parameter the check_path you have set for the wanted firewall area:
+
     # app/config/security.yml
     security:
         ...
@@ -59,7 +62,8 @@ Then, set to the same parameter the check_path you have set for the wanted firew
                 form_login:
                     check_path: %local_form_login_check_path%
 
-Now, you can set your URL that makes the login_check
+Now, you can set your URL that makes the login_check:
+
     # app/config/config.yml
     parameters:
         local_form_login_check_path: /demo/secured/login_check 
