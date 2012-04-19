@@ -13,6 +13,20 @@ Assumption
 ---------------------
 This assumption used for this temporary fix is really precise but allows only one 'login_check' route (for one firewall so)
 
+To begin
+---------------------
+
+First, the auto_start session parameter must be disabled like this:
+
+    # app/config/config.yml
+    ...
+    framework:
+        ...
+        session:
+            auto_start:     false
+
+
+
 Installation
 ---------------------
 
