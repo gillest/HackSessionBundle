@@ -20,10 +20,9 @@ class AuthenticationHackListener
     public function onKernelRequest(GetResponseEvent $event)
     {
         $request = $event->getRequest();
-        if ($request->getPathInfo() == $this->formLoginCheckPath && !$request->hasPreviousSession()) {
+        if (rawurldecode($request->getPathInfo()) === $this->formLoginCheckPath && !$request->hasPreviousSession()) {
             $request->cookies->set(session_name(), 'tmp');
             $request->setSession($this->session);
         }
     }
-    
 }
