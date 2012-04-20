@@ -31,6 +31,7 @@ Installation
 ---------------------
 
 Add the bundle in the deps file of your project
+
     # deps
     [HackSessionBundle]
         git=git@github.com:gillest/HackSessionBundle.git
