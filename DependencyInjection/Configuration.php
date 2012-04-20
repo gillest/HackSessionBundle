@@ -20,11 +20,8 @@ class Configuration implements ConfigurationInterface
         $treeBuilder = new TreeBuilder();
         $rootNode = $treeBuilder->root('gilles_hack_session');
 
-        // Here you should define the parameters that are allowed to
-        // configure your bundle. See the documentation linked above for
-        // more information on that topic.
         $rootNode->children()
-            ->scalarNode('login_check_path')
+            ->scalarNode('login_check_path')->cannotBeEmpty()->end()
         ->end();
 
         return $treeBuilder;
