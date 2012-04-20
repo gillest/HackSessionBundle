@@ -30,14 +30,15 @@ First, the auto_start session parameter must be disabled like this:
 Installation
 ---------------------
 
-Add the bundle in the deps file of your project
+Add the bundle in the deps file of your project:
 
     # deps
     [HackSessionBundle]
         git=git@github.com:gillest/HackSessionBundle.git
         target=bundles/Gilles/Bundle/HackSessionBundle
 
-Launch the bundle install command then
+Launch the bundle install command then:
+
     ./bin/vendors install
 
 Add the bundle namespace to the autoload configuration file.
